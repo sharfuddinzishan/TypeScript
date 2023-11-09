@@ -21,4 +21,22 @@
     let role = true;
     let showStudent = (s) => s.name;
     console.log(showStudent(s1));
+    let order1 = {
+        product: 'Iphone13',
+        price: 120000,
+        quantity: 2,
+        total() {
+            return this.price * this.quantity;
+        }
+        /*
+        total:function(){ // anonymous function
+            return this.price*this.quantity
+        }
+        */
+        /*
+         // Function as Expression not support this
+         total:()=>this.price*this.quantity
+         */
+    };
+    console.log(order1.total());
 }

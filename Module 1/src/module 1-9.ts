@@ -38,7 +38,37 @@ type getStudent=(student:Student)=>string
 let showStudent:getStudent=(s)=>s.name;
 console.log(showStudent(s1));
 
+/*
+    Calculate total from method of object by implementingtype alias
+*/
 
+type Order={
+    product:string;
+    quantity:number;
+    price:number;
+    total:()=>number;
+}
+let order1:Order={
+    product:'Iphone13',
+    price:120000,
+    quantity:2,
+    total(){ //normal function
+        return this.price*this.quantity
+    }
+
+    /*
+    total:function(){ // anonymous function
+        return this.price*this.quantity
+    }
+    */
+
+   /*
+    // Function as Expression not support this 
+    total:()=>this.price*this.quantity
+    */
+}
+
+console.log(order1.total())
 
 
 }
