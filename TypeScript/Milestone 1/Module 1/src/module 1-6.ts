@@ -44,8 +44,13 @@ console.log(orders.balance);
 /* Pass array as argument and return square */
 let marks:number[]=[2,3,4,5,6]
 
-let totalMarks:number[]=marks.map((mark:number):number=>mark*mark)
-totalMarks.map(mark=>console.log(mark))
+function getMarks(marks:number[]):number[]{
+    let totalMarks:number[]=marks.map((mark:number):number=>mark*mark)
+    return totalMarks
+}
+
+getMarks(marks).map(mark=>console.log(mark))
+
 
 
 

@@ -30,5 +30,8 @@ orders.total(50);
 console.log(orders.balance);
 /* Pass array as argument and return square */
 let marks = [2, 3, 4, 5, 6];
-let totalMarks = marks.map((mark) => mark * mark);
-totalMarks.map(mark => console.log(mark));
+function getMarks(marks) {
+    let totalMarks = marks.map((mark) => mark * mark);
+    return totalMarks;
+}
+getMarks(marks).map(mark => console.log(mark));
