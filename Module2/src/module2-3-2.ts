@@ -32,4 +32,33 @@
     console.log(show(items));
     console.log(show(orders));
 
+    // Generic for Array of Object
+
+    type Arr<T>=Array<T>
+    type Person={
+        name:string;
+        age:number;
+        married?:boolean;
+        role:'User'|'Admin'|'Normal'
+    }
+//  Array Of Object
+    const users:Arr<Person>=[
+        {
+            name:'Sharfuddin',
+            age:28,
+            married:true,
+            role:"Admin"
+        },
+        {
+            name:'Minar',
+            age:33,
+            married:false,
+            role:"User"
+        }
+    ]
+// Array of Strings
+    const inventory:Arr<string>=['Mobile','Laptop','SSD']
+// Array of Numbers
+    const rolls:Arr<number>=[10,23,54]
+
 }
